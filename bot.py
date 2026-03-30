@@ -146,6 +146,31 @@ class SQLiteStore:
                 (user_id, free_text, paid_text, meta_json)
             )
 
+    def get_last_meta(self, user_id: int) -> dict | None:
+        with self._connect() as conn:
+            row = conn.execute(
+                "SELECT meta_json FROM user_history WHERE user_id = ? ORDER BY id DESC LIMIT 1",
+                (user_id,)
+            ).fetchone()
+            if row is None:
+                return None
+            return json.loads(row["meta_json"])
+
+    def get_history(self, user_id: int, limit: int = 3) -> list[dict]:
+        with self._connect() as conn:
+            rows = conn.execute(
+                "SELECT free_text, meta_json, created_at FROM user_history WHERE user_id = ? ORDER BY id DESC LIMIT ?",
+                (user_id, limit)
+            ).fetchall()
+            result = []
+            for row in rows:
+                result.append({
+                    "free_text": row["free_text"],
+                    "meta": json.loads(row["meta_json"]) if row["meta_json"] else {},
+                    "created_at": row["created_at"]
+                })
+            return result
+
 
 def _build_group_prompt(bot_username: str) -> dict:
     url = TelegramAPI.deep_link(bot_username, "forecast")
@@ -242,6 +267,25 @@ def _handle_message(api: TelegramAPI, store: SQLiteStore, message: dict, bot_use
 
     state = store.get(user_id)
 
+    if text == "/history":
+        history = store.get_history(user_id, limit=3)
+        if not history:
+            api.send_message(chat_id, "История пуста. Сначала получи прогноз через /start.")
+            return
+        lines = ["Последние прогнозы:"]
+        for i, item in enumerate(history, start=1):
+            meta = item.get("meta", {})
+            date_part = (item.get("created_at") or "")[:10]
+            focus_label = meta.get("focus_label") or meta.get("focus", "")
+            days_range = meta.get("days_range", "")
+            initial = meta.get("initial", "")
+            first_line = (item.get("free_text") or "").split("\n", 1)[0]
+            lines.append(f"{i}. {date_part} • {focus_label} • {days_range} • «{initial}»")
+            if first_line:
+                lines.append(first_line)
+        api.send_message(chat_id, "\n".join(lines))
+        return
+
     if message.get("photo") and state.get("awaiting_photo"):
         state["photo"] = True
         state["awaiting_photo"] = False
@@ -269,7 +313,11 @@ def _send_forecast(api: TelegramAPI, store: SQLiteStore, chat_id: int, user_id: 
         focus=state["focus"],
         photo=state.get("photo", False)
     )
-    payload = generate_bundle(data)
+    last_meta = store.get_last_meta(user_id)
+    exclude = None
+    if last_meta and isinstance(last_meta, dict):
+        exclude = last_meta.get("template_idx")
+    payload = generate_bundle(data, exclude=exclude)
     store.set_payload(user_id, payload["paid"])
 
     free_text = build_free_text({
