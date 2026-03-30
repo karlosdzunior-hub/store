@@ -57,7 +57,19 @@ PSYCH_TEMPLATES = [
     ("Ты спокойно смотришь на хаос и наводишь порядок. {age_group}, {relationship} — такой у тебя стиль выживания.", 1),
     ("Ты не терпишь слабых оправданий — ни у других, ни у себя. {age_group}, {relationship} — и это тебя усиливает.", 1),
     ("Ты привык держать дистанцию, пока не увидишь выгоду. {age_group}, {relationship} — и это делает тебя опасным соперником.", 1),
-    ("Ты можешь быть дружелюбным, но дружба для тебя — это контракт. {age_group}, {relationship} — и ты это знаешь.", 1)
+    ("Ты можешь быть дружелюбным, но дружба для тебя — это контракт. {age_group}, {relationship} — и ты это знаешь.", 1),
+    ("Ты не любишь хаос, но умеешь из него выжать выгоду. {age_group}, {relationship} — ты умеешь держать форму.", 1),
+    ("Ты не терпишь шумных обещаний — тебе нужны факты. {age_group}, {relationship} — и это твой фильтр.", 1),
+    ("Ты умеешь казаться мягким, но внутри у тебя сталь. {age_group}, {relationship} — это читается.", 1),
+    ("Ты редко просишь помощи, потому что привык рассчитывать на себя. {age_group}, {relationship} — и это твоя сила.", 1),
+    ("Ты не ведёшься на дешёвую драму. {age_group}, {relationship} — ты ценишь спокойствие и результат.", 1),
+    ("Ты видишь слабые места раньше других. {age_group}, {relationship} — и это даёт тебе преимущество.", 1),
+    ("Ты умеешь быть жёстким, но справедливым. {age_group}, {relationship} — поэтому к тебе тянутся.", 1),
+    ("Ты часто думаешь наперёд, и это спасает тебя. {age_group}, {relationship} — ты стратег, не наблюдатель.", 1),
+    ("Ты не любишь, когда тебя торопят — ты сам выбираешь темп. {age_group}, {relationship} — и это видно.", 1),
+    ("Ты привык держать маску, но внутри живёт голод к {focus_emoji}. {age_group}, {relationship}.", 1),
+    ("Ты видишь чужие мотивы и редко ошибаешься. {age_group}, {relationship} — твоя интуиция не спит.", 1),
+    ("Ты давно понял, что доверие — это ресурс. {age_group}, {relationship} — ты распоряжаешься им аккуратно.", 1)
 ]
 
 SITUATION_TEMPLATES = [
@@ -78,7 +90,19 @@ SITUATION_TEMPLATES = [
     ("Сейчас важно не ускоряться, а точнее выбирать направление. {tone} подсказывает это.", 1),
     ("Ты на границе нового витка, и это ощущается в каждом решении.", 1),
     ("Пауза не означает слабость — это подготовка к рывку. {tone} прямо об этом.", 1),
-    ("Тишина вокруг — редкий шанс выстроить сильный ход.", 1)
+    ("Тишина вокруг — редкий шанс выстроить сильный ход.", 1),
+    ("Сейчас важнее наблюдать, чем шуметь. {tone} помогает держать дистанцию.", 1),
+    ("Ты словно накапливаешь энергию — потом выстрелишь. {tone} это подтверждает.", 1),
+    ("Вокруг много суеты, но ты держишься отдельно. {tone} здесь — твой фильтр.", 1),
+    ("Ситуация просит холодной головы, и у тебя она есть. {tone} на твоей стороне.", 1),
+    ("Ты чувствуешь, что тебя тестируют. {tone} подсказывает, что это не случайно.", 1),
+    ("Сейчас не время рубить с плеча. {tone} и пауза — правильный ход.", 1),
+    ("Ты близко к решению, но не показываешь это. {tone} держит интригу.", 1),
+    ("События сжимаются, и скоро будет выдох. {tone} намекает на кульминацию.", 1),
+    ("Ты как будто в тумане, но шаги слышны. {tone} говорит: смотри внимательно.", 1),
+    ("Тебя окружают люди, но ты один на один со своим выбором. {tone} усиливает это.", 1),
+    ("Сейчас не время для лишних слов, время для точных движений. {tone} это поддерживает.", 1),
+    ("Мир проверяет тебя на выдержку, и ты её показываешь.", 1)
 ]
 
 EVENT_TEMPLATES = [
@@ -99,7 +123,19 @@ EVENT_TEMPLATES = [
     ("Ключевой момент: появится контакт, который откроет дверь. В имени — «{initial}».", 1),
     ("Событие: шанс придёт через знакомого знакомого. Буква «{initial}» — метка.", 1),
     ("Ключевой момент: ты увидишь, кто играет против. Имя с «{initial}» выдаст его.", 1),
-    ("Событие: в ближайшие {days_low}–{days_high} дней всплывёт ситуация, где победит тот, кто выдержит паузу.", 1)
+    ("Событие: в ближайшие {days_low}–{days_high} дней всплывёт ситуация, где победит тот, кто выдержит паузу.", 1),
+    ("Событие: в ближайшие {days_low}–{days_high} дней появится повод пересмотреть договорённости. Буква «{initial}» мелькнёт в переписке.", 1),
+    ("Ключевой момент: ты услышишь «да», но с условием. Имя с «{initial}» будет ключом.", 1),
+    ("Событие: кто-то предложит быстрый ход, но выиграет тот, кто выдержит паузу.", 1),
+    ("Ключевой момент: в ближайшие {days_low}–{days_high} дней ты получишь сообщение, которое нельзя игнорировать.", 1),
+    ("Событие: шанс появится в неудобное время — и именно поэтому он настоящий.", 1),
+    ("Ключевой момент: ты столкнёшься с проверкой на лояльность. Имя с «{initial}» рядом.", 1),
+    ("Событие: в ближайшие {days_low}–{days_high} дней появится партнёр, который захочет играть по своим правилам.", 1),
+    ("Ключевой момент: ты увидишь скрытый интерес там, где раньше было ровно.", 1),
+    ("Событие: предложение придёт через посредника. Буква «{initial}» будет в его имени.", 1),
+    ("Ключевой момент: тебе предложат выбор между выгодой и комфортом — и тут важно не дрогнуть.", 1),
+    ("Событие: в ближайшие {days_low}–{days_high} дней всплывёт старый контакт с новым смыслом.", 1),
+    ("Ключевой момент: ты окажешься в нужном месте на 10 минут раньше — и это решит исход.", 1)
 ]
 
 INTRIGUE_TEMPLATES = [
@@ -120,7 +156,19 @@ INTRIGUE_TEMPLATES = [
     ("Хочешь точные числа и буквы — открывай следующий слой.", 1),
     ("Полная часть покажет, где именно ловить выгоду.", 1),
     ("Ты близко к развилке — в деталях есть подсказка.", 1),
-    ("Я оставлю намёк здесь, а ключ — за ⭐.", 1)
+    ("Я оставлю намёк здесь, а ключ — за ⭐.", 1),
+    ("У меня есть точный промежуток часов, когда лучше всего действовать. Это в полной части.", 1),
+    ("Есть одна буква, которая объясняет всё. Хочешь знать — открывай.", 1),
+    ("Я вижу два сценария, и один явно сильнее. Скажу какой — за ⭐.", 1),
+    ("Ты близко к правильному решению, но нужна подсказка. Она платная.", 1),
+    ("Детали дадут тебе конкретный план, а не туман.", 1),
+    ("Полная версия покажет, кто реально на твоей стороне.", 1),
+    ("В деталях есть предупреждение, которое экономит деньги.", 1),
+    ("Я знаю, где именно ты можешь перегнуть. Подскажу в полной части.", 1),
+    ("Есть имя, которое нельзя перепутать. Оно в деталях.", 1),
+    ("Ты хочешь знать точный день — он уже есть у меня.", 1),
+    ("В платной части есть короткая фраза-ключ для разговора.", 1),
+    ("Если хочешь избежать ошибки, которую делают все — открывай.", 1)
 ]
 
 PAID_DETAILS_TEMPLATES = [
@@ -141,7 +189,19 @@ PAID_DETAILS_TEMPLATES = [
     ("Точный день: {exact_date}. Буква: «{initial}». Совет: не подписывайся на неясные условия.", 1),
     ("Точная дата: {exact_date}. Буква: «{initial}». Тактика: прояви холодную вежливость.", 1),
     ("Точный день: {exact_date}. Буква: «{initial}». Предупреждение: избегай длинных переписок.", 1),
-    ("Точная дата: {exact_date}. Буква: «{initial}». Совет: перепроверь цифры, даже если «всё ясно».", 1)
+    ("Точная дата: {exact_date}. Буква: «{initial}». Совет: перепроверь цифры, даже если «всё ясно».", 1),
+    ("Точная дата: {exact_date}. Буква: «{initial}». Ход: не называй цену первым.", 1),
+    ("Точный день: {exact_date}. Буква: «{initial}». Совет: попроси подтверждение письменно.", 1),
+    ("Точная дата: {exact_date}. Буква: «{initial}». Тактика: держи разговор в личных сообщениях.", 1),
+    ("Точный день: {exact_date}. Буква: «{initial}». Предупреждение: избегай ультиматумов.", 1),
+    ("Точная дата: {exact_date}. Буква: «{initial}». Ход: обозначь границы сразу.", 1),
+    ("Точный день: {exact_date}. Буква: «{initial}». Совет: не соглашайся на устные обещания.", 1),
+    ("Точная дата: {exact_date}. Буква: «{initial}». Тактика: спроси про сроки в первом сообщении.", 1),
+    ("Точный день: {exact_date}. Буква: «{initial}». Предупреждение: не принимай решение на эмоциях.", 1),
+    ("Точная дата: {exact_date}. Буква: «{initial}». Совет: держи запасной план.", 1),
+    ("Точный день: {exact_date}. Буква: «{initial}». Ход: зафиксируй ключевую цифру.", 1),
+    ("Точная дата: {exact_date}. Буква: «{initial}». Тактика: сохрани переписку.", 1),
+    ("Точный день: {exact_date}. Буква: «{initial}». Совет: проверь, кто принимает финальное решение.", 1)
 ]
 
 FOCUS_MAP = {
@@ -200,6 +260,28 @@ def _pick(rng, items):
     return items[rng.randrange(len(items))]
 
 
+def _pick_indexed(rng, items, exclude_idx: int | None = None) -> tuple[int, str]:
+    if not items:
+        raise ValueError("items must not be empty")
+    indexed = list(enumerate(items))
+    if exclude_idx is not None and 0 <= exclude_idx < len(items):
+        indexed = [pair for pair in indexed if pair[0] != exclude_idx]
+        if not indexed:
+            indexed = list(enumerate(items))
+    if isinstance(items[0], tuple):
+        total = sum(item[1][1] for item in indexed)
+        r = rng.uniform(0, total)
+        upto = 0.0
+        for idx, (text, weight) in indexed:
+            upto += weight
+            if r <= upto:
+                return idx, text
+        last_idx, last_item = indexed[-1]
+        return last_idx, last_item[0]
+    idx, text = indexed[rng.randrange(len(indexed))]
+    return idx, text
+
+
 def _weekday_tone() -> str:
     return WEEKDAY_TONES[date.today().weekday()]
 
@@ -213,7 +295,7 @@ def _build_live_insertions(rng) -> list[str]:
     return rng.sample(LIVE_INSERTIONS, k=live_count)
 
 
-def generate_forecast(data: ForecastInput) -> dict:
+def generate_forecast(data: ForecastInput, exclude: dict | None = None) -> dict:
     if data.age_group not in AGE_GROUPS:
         raise ValueError("age_group must be one of: %s" % ", ".join(AGE_GROUPS))
     if data.relationship not in RELATIONSHIPS:
@@ -221,6 +303,7 @@ def generate_forecast(data: ForecastInput) -> dict:
     if data.focus not in FOCUSES:
         raise ValueError("focus must be one of: %s" % ", ".join(FOCUSES))
 
+    exclude = exclude or {}
     rng = random.Random(data.seed)
 
     base_tone = _weekday_tone()
@@ -236,25 +319,30 @@ def generate_forecast(data: ForecastInput) -> dict:
 
     initial = _pick(rng, INITIALS)
 
-    psych = _format_block(_pick(rng, PSYCH_TEMPLATES),
+    psych_idx, psych_tpl = _pick_indexed(rng, PSYCH_TEMPLATES, exclude.get("psych"))
+    psych = _format_block(psych_tpl,
         age_group=data.age_group,
         relationship=data.relationship,
         tone=psych_tone,
         focus_emoji=focus_text
     )
-    situation = _format_block(_pick(rng, SITUATION_TEMPLATES), tone=situation_tone)
-    event = _format_block(_pick(rng, EVENT_TEMPLATES),
+    situation_idx, situation_tpl = _pick_indexed(rng, SITUATION_TEMPLATES, exclude.get("situation"))
+    situation = _format_block(situation_tpl, tone=situation_tone)
+    event_idx, event_tpl = _pick_indexed(rng, EVENT_TEMPLATES, exclude.get("event"))
+    event = _format_block(event_tpl,
         days_low=days_low,
         days_high=days_high,
         initial=initial,
         tone=event_tone
     )
-    intrigue = _pick(rng, INTRIGUE_TEMPLATES)
+    intrigue_idx, intrigue_tpl = _pick_indexed(rng, INTRIGUE_TEMPLATES, exclude.get("intrigue"))
+    intrigue = intrigue_tpl
 
     live_insertions = _build_live_insertions(rng)
 
     exact_date = date.today() + timedelta(days=days_high)
-    paid_details = _format_block(_pick(rng, PAID_DETAILS_TEMPLATES),
+    paid_idx, paid_tpl = _pick_indexed(rng, PAID_DETAILS_TEMPLATES, exclude.get("paid"))
+    paid_details = _format_block(paid_tpl,
         exact_date=exact_date.strftime("%Y-%m-%d"),
         initial=initial
     )
@@ -275,7 +363,14 @@ def generate_forecast(data: ForecastInput) -> dict:
             "base_tone": base_tone,
             "days_range": f"{days_low}–{days_high}",
             "initial": initial,
-            "exact_date": exact_date.strftime("%Y-%m-%d")
+            "exact_date": exact_date.strftime("%Y-%m-%d"),
+            "template_idx": {
+                "psych": psych_idx,
+                "situation": situation_idx,
+                "event": event_idx,
+                "intrigue": intrigue_idx,
+                "paid": paid_idx
+            }
         }
     }
 
@@ -318,8 +413,8 @@ def build_paid_text(payload: dict) -> str:
     return payload["paid_details"]
 
 
-def generate_bundle(data: ForecastInput) -> dict:
-    base = generate_forecast(data)
+def generate_bundle(data: ForecastInput, exclude: dict | None = None) -> dict:
+    base = generate_forecast(data, exclude=exclude)
     free = {
         "psych": base["psych"],
         "situation": base["situation"],
