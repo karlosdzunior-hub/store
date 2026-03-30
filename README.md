@@ -41,7 +41,8 @@ python bot.py
 ```
 
 Send `!прогноз` in a group or `/start` in DM to trigger the flow.
+Use `/history` in DM to see the last 3 forecasts.
 
 ## Storage
 
-The bot stores user state, last paid payload, and history in SQLite (`BOT_DB_PATH`).
+The bot stores user state, last paid payload, and history in SQLite (`BOT_DB_PATH`). It also avoids repeating the same template on the next forecast for the same user.
